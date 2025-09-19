@@ -26,7 +26,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
     // Cierra el modal cuando se hace clic en "Aceptar"
     acceptBtn.addEventListener("click", function() {
       modal.style.display = "none";
-      window.location.href = "index.html"; // Redirige a index.html
+      window.location.href = "web/inicio.html"; // Redirige a index.html
     });
 
     // Cierra el modal cuando se hace clic en la X

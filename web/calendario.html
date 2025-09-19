@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Nuestro Universo🪐</title>
-   <!-- Bootstrap CSS CDN -->
+  <!-- Bootstrap CSS CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <!-- Enlazamos el CSS personalizado -->
-  <link rel="stylesheet" href="styles.css" />
-  
+  <!-- Enlace a los estilos personalizados -->
+  <link rel="stylesheet" href="/css/styles.css" />
+
   <!-- fuentes titulo y textos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
 
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap" rel="stylesheet">
-
+  
 </head>
 <body>
 
-   <!-- Navbar -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg" style="background-color: #FFB8E0;">
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,82 +59,40 @@
     </div>
   </nav>
 
-
-  <!-- trivia -->
-   
-    <div class="trivia-container">
-      
-    <h1 class="text-center mb-4" style="color: #EC7FA9;">Trivia</h1>
-
-    <form id="triviaForm">
-        <div class="question">
-            <p>1. ¿Dónde fue nuestra primera cita?</p>
-            <input type="text" id="q1" class="form-control" required>
+  <!-- Contenido Principal -->
+  <div class="container my-5" style="background-color: #FFEDFA;">
+    <h1 class="text-center mb-4" style="color: #EC7FA9;">Calendario y Cuenta Regresiva</h1>
+    
+    <!-- Calendario -->
+    <div id="calendar" class="mb-5">
+      <div class="row">
+        <div class="col-12 text-center mb-4">
+          <h2 id="calendar-title" style="color: #EC7FA9;"></h2>
         </div>
-
-        <div class="question">
-            <p>2. ¿Qué cenamos la primera vez juntos?</p>
-            <input type="text" id="q2" class="form-control" required>
+        <div class="col-12">
+          <table id="calendar-table" class="table table-bordered">
+            <!-- El calendario se generará aquí -->
+          </table>
         </div>
+      </div>
+    </div>
 
-        <div class="question">
-            <p>3. ¿Qué bebida nunca falta cuando estamos juntos?</p>
-            <input type="text" id="q3" class="form-control" required>
-        </div>
+    <!-- Cuenta Regresiva -->
+    <div class="text-center" id="countdown" style="font-size: 1.5rem; font-weight: bold; color: #EC7FA9;">
+      <!-- La cuenta regresiva se mostrará aquí -->
+    </div>
+  </div>
 
-        <div class="question">
-            <p>4. ¿A qué lugar vamos más seguido?</p>
-            <input type="text" id="q4" class="form-control" required>
-        </div>
-
-        <div class="question">
-            <p>5. ¿Qué día celebramos nuestro cumplemes?</p>
-            <input type="text" id="q5" class="form-control" required>
-        </div>
-
-        <div class="question">
-            <p>6. ¿Qué apodo tierno me decís más seguido?</p>
-            <input type="text" id="q6" class="form-control" required>
-        </div>
-
-        <div class="question">
-            <p>7. ¿Qué regalo me hiciste que más me sorprendió?</p>
-            <input type="text" id="q7" class="form-control" required>
-        </div>
-
-        <div class="question">
-            <p>8. ¿Qué color de ropa uso más seguido?</p>
-            <input type="text" id="q8" class="form-control" required>
-        </div>
-
-        <div class="question">
-            <p>9. ¿Qué lugar me gustaría visitar con vos sí o sí?</p>
-            <input type="text" id="q9" class="form-control" required>
-        </div>
-
-        <div class="question">
-            <p>10. ¿Qué género musical escuchamos más seguido?</p>
-            <input type="text" id="q10" class="form-control" required>
-        </div>
-
-        <div class="text-center mt-4">
-            <button type="button" class="btn button" id="submitButton" onclick="calculateScore()">Ver Resultados</button>
-            <button type="button" class="btn button" id="resetButton" onclick="resetTrivia()" style="display:none;">Volver a intentar</button>
-        </div>
-
-    </form>
-
-    <div class="result" id="result"></div>
-</div>
-
-   <!-- Footer -->
+  <!-- Footer -->
   <footer class="text-center py-3 mt-5" style="background-color: #FFB8E0;">
     <p>&copy; Hecho con amor, by Ludi 💚</p>
   </footer>
 
-    <script src="./js/trivia.js"></script>
+  <!-- Enlace al archivo JS -->
+  <script src="/js/calendario.js" defer></script>
 
-  <!-- Bootstrap JS Bundle -->
+
+  <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
