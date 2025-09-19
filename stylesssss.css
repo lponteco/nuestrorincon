@@ -1,0 +1,71 @@
+/* test 2: */
+
+/* Centrar el contenedor principal del test sin afectar al título */
+.test-container {
+  display: block; /* Cambiar a bloque para evitar interferencias con flexbox en h1 */
+  width: 100%;
+  max-width: 800px; /* Limitar el ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  padding: 20px;
+  text-align: center; /* Centra el contenido dentro de los elementos */
+}
+
+/* Estilos para las tarjetas del test de compatibilidad */
+.test-container .compatibility-card {
+  background-color: white; /* Fondo blanco */
+  border: 2px solid #EC7FA9; /* Borde rosa */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: none; /* Elimina la transición global */
+  transform: none; /* Elimina transformaciones heredadas */
+  margin: 0 auto; /* Centra las tarjetas horizontalmente */
+  max-width: 700px; /* Limita el ancho de las tarjetas */
+  width: 100%; /* Asegura que las tarjetas ocupen el 100% disponible dentro del formulario */
+}
+
+/* Estilos adicionales para las tarjetas */
+.test-container .compatibility-card .card-body {
+  padding: 20px;
+}
+
+/* Personalizar las tarjetas cuando se selecciona una opción */
+.test-container .compatibility-card input[type="radio"]:checked + label {
+  color: #EC7FA9; /* Cambia el color cuando la opción está seleccionada */
+}
+
+/* Asegurarse de que el formulario ocupe el 100% del ancho disponible */
+.test-container form {
+  width: 100%;
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  text-align: center; /* Para que los elementos del formulario se alineen a la izquierda */
+}
+
+/* Centrar el título (h5) */
+.test-container .compatibility-card h5 {
+  text-align: center; /* Centra el título de la pregunta */
+  margin-bottom: 15px; /* Espacio entre el título y las opciones */
+}
+
+/* Estilo para las opciones de radio con sus etiquetas */
+.test-container .compatibility-card .form-check {
+  display: flex;
+  justify-content: flex-start; /* Alinea todo hacia la izquierda */
+  align-items: center; /* Alinea el radio button y el texto verticalmente */
+  margin-bottom: 10px; /* Espacio entre las opciones */
+  text-align: left; /* Alinea el texto hacia la izquierda */
+}
+
+/* Mover el input (radio button) hacia la derecha */
+.test-container .compatibility-card .form-check input[type="radio"] {
+  margin-left: 100px; /* Mueve el radio button hacia la derecha */
+  margin-right: 10px; /* Espacio entre el radio button y el texto */
+  position: relative;
+  display: inline-block; /* Mantiene el radio button y el texto en la misma línea */
+}
+
+/* Estilo para las etiquetas */
+.test-container .compatibility-card .form-check label {
+  font-size: 16px; /* Ajusta el tamaño de la fuente de la etiqueta */
+  padding-left: 5px; /* Da un pequeño espacio entre el radio button y la etiqueta */
+}

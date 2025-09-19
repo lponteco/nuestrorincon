@@ -1,0 +1,455 @@
+/* Estilos generales */
+body {
+  background-color: #FFEDFA;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel', serif;
+}
+
+p {
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Contenedor principal para apilar elementos verticalmente */
+.container {
+  display: block;
+  max-width: 100%;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+
+/* Estilos de las tarjetas en el sitio web principal */
+.card {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 1rem 1rem 0 0; 
+  display: block;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Estilo de boton de login*/
+.btn-custom-primary {
+  background-color: #ff69b4;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.btn-custom-primary:hover {
+  background-color: #ff1493;
+}
+
+/* Estilos para inputs y checkboxes */
+.form-check-input:checked {
+  background-color: #EC7FA9;
+  border-color: #EC7FA9;
+}
+
+input.form-control:focus {
+  border-color: #EC7FA9 !important;
+  box-shadow: 0 0 0 0.25rem rgba(236, 127, 169, 0.25) !important;
+  outline: none;
+}
+
+/* Estilo de texto login */
+.text-custom-primary {
+  color: #EC7FA9; 
+}
+
+/* imagen login */
+.center-image {
+  display: block;
+  margin: 0 auto 1rem auto;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #EC7FA9; 
+  box-shadow: 0 0 8px rgba(236, 127, 169, 0.6);
+}
+
+/* **Centrar solo el formulario de login** */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.login-form {
+  max-width: 400px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem rgba(190, 89, 133, 0.1); 
+  background-color: #ffffff;
+  margin: 0 auto;
+}
+
+/* errores en el login */
+#error {
+  color: red;
+  display: none;
+  text-align: center;
+}
+
+/* Pie de página */
+footer {
+  background-color: #FFB8E0; /* Rosa claro */
+  color: black; /* Color de texto blanco */
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto;
+  
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+
+body.musica-page {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Asegura que el contenido principal (container) ocupe todo el espacio disponible */
+body.musica-page .container {
+  flex: 1; /* El contenedor ocupa el espacio restante */
+}
+
+/* Estilos adicionales para mejorar la responsividad */
+@media (max-width: 768px) {
+  .card {
+    max-width: 100%;
+  }
+  .center-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .login-form {
+    padding: 1.5rem;
+  }
+}
+
+/* Navbar */
+.navbar {
+  background-color: #FFB8E0 !important; /* Rosa claro para el navbar */
+}
+
+.navbar-brand,
+.nav-link,
+.navbar-toggler-icon {
+  color: black !important; /* Texto blanco en el navbar */
+}
+
+/* Centrar los elementos de la navbar */
+.navbar-nav {
+  display: flex;
+  justify-content: center;  /* Centra los elementos de la navbar */
+  width: 100%;  /* Asegura que ocupe todo el ancho disponible */
+}
+
+.navbar-nav .nav-item {
+  margin-left: 10px; /* Espaciado entre los items */
+  margin-right: 10px; /* Espaciado entre los items */
+}
+
+.navbar-nav .nav-item.active {
+  color: black !important;
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-menu {
+  background-color: #FFB8E0 !important; /* Fondo de dropdown igual al navbar */
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item {
+  color: black !important; /* Texto blanco en los elementos del dropdown */
+}
+
+.navbar-nav .nav-item.dropdown .dropdown-item:hover {
+  background-color: #EC7FA9 !important; /* Resaltar en rosa fuerte al pasar el mouse */
+  color: black !important; /* Aseguramos que el texto se mantenga blanco */
+}
+
+.navbar-toggler {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+
+/* Estilos de las filas de tarjetas */
+.row {
+  margin-top: 20px;
+}
+
+.row-cols-1 .col,
+.row-cols-md-2 .col,
+.row-cols-lg-4 .col {
+  display: flex;
+  justify-content: center;
+}
+
+/* **Estilo para el calendario y cuenta regresiva** */
+#calendar-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+#calendar-table th, #calendar-table td {
+  padding: 8px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+#calendar-table td.today {
+  background-color: #FFB8E0; /* Resalta el día de hoy */
+  font-weight: bold;
+}
+
+#countdown {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* boton de trivia y test  */
+.button {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  margin: 0 auto; 
+  display: block;
+}
+
+.button:hover {
+  background-color: #ff1493;
+}
+
+
+input.form-control:focus {
+    border-color: #EC7FA9 !important;
+    box-shadow: 0 0 0 0.25rem rgba(236, 127, 169, 0.25) !important;
+    outline: none;
+}
+
+.form-check-input:checked {
+    background-color: #EC7FA9;
+    border-color: #EC7FA9;
+}
+
+
+/* -------- */
+/* Estilos básicos del modal */
+.modal {
+  display: none; /* Inicialmente el modal está oculto */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Asegura que el modal esté por encima de otros elementos */
+}
+
+/* Estilos del contenido del modal */
+.modal-content {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Centrar el ícono dentro del modal */
+.modal-content img {
+  display: block;    
+  margin: 0 auto 20px; 
+  max-width: 60px;   
+  height: auto;
+}
+
+/* Estilos del botón de cerrar */
+.close-btn {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+  color: #333;
+}
+
+/* Estilos del botón de aceptar */
+.btn-accept {
+  background-color: #ff69b4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.btn-accept:hover {
+  background-color: #ff1493;
+  color: black;
+}
+
+/* TEST  */
+/* Centrar el contenedor principal del test sin afectar al título */
+.test-container {
+  display: block; /* Cambiar a bloque para evitar interferencias con flexbox en h1 */
+  width: 100%;
+  max-width: 800px; /* Limitar el ancho máximo del contenedor */
+  margin: 0 auto; /* Centra el contenedor en la página */
+  padding: 20px;
+  text-align: center; /* Centra el contenido dentro de los elementos */
+}
+
+
+/* Estilos para las tarjetas del test de compatibilidad */
+.test-container .compatibility-card {
+  background-color: white; /* Fondo blanco */
+  border: 2px solid #EC7FA9; /* Borde rosa */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  transition: none; /* Elimina la transición global */
+  transform: none; /* Elimina transformaciones heredadas */
+  margin: 0 auto; /* Centra las tarjetas horizontalmente */
+  max-width: 700px; /* Limita el ancho de las tarjetas */
+  width: 100%; /* Asegura que las tarjetas ocupen el 100% disponible dentro del formulario */
+}
+
+/* Estilos adicionales para las tarjetas */
+.test-container .compatibility-card .card-body {
+  padding: 20px;
+}
+
+/* Personalizar las tarjetas cuando se selecciona una opción */
+.test-container .compatibility-card input[type="radio"]:checked + label {
+  color: #EC7FA9; /* Cambia el color cuando la opción está seleccionada */
+}
+
+/* Asegurarse de que el formulario ocupe el 100% del ancho disponible */
+.test-container form {
+  width: 100%;
+  margin: 0 auto; /* Centra el formulario horizontalmente */
+  text-align: center; /* Para que los elementos del formulario se alineen a la izquierda */
+}
+
+
+/* ------------ */
+
+/* Centrar el contenedor principal del formulario (trivia-form) */
+.trivia-container {
+  display: flex; /* Usamos Flexbox para centrar el contenido */
+  flex-direction: column; /* Colocamos los elementos en una columna */
+  justify-content: center; /* Centra verticalmente el contenido */
+  align-items: center; /* Centra horizontalmente el contenido */
+  width: 100%;
+  min-height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la página */
+  padding: 20px;
+  text-align: center;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* Estilos para las preguntas */
+.trivia-container .question {
+  background-color: white; /* Fondo blanco */
+  border: 2px solid #EC7FA9; /* Borde rosa */
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  margin: 10px 0; /* Margen entre las preguntas */
+  max-width: 700px; /* Limita el ancho de las preguntas */
+  width: 100%; /* Asegura que las preguntas ocupen el 100% disponible dentro del formulario */
+}
+
+
+/* Estilo para las preguntas en los inputs */
+.trivia-container .question p {
+  margin-bottom: 10px; /* Espacio debajo del texto de cada pregunta */
+  font-weight: 600; /* Negrita para el texto */
+  color: #EC7FA9; /* Color rosa para el texto */
+}
+
+/* Personalizar los inputs dentro de las preguntas */
+.trivia-container .question input[type="text"] {
+  width: 100%; /* Asegura que el input ocupe todo el ancho disponible */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px; /* Tamaño del texto en los inputs */
+  margin-top: 10px; /* Espacio entre el texto y el input */
+}
+
+/* Cambiar el borde del input al recibir foco */
+.trivia-container .question input[type="text"]:focus {
+  border-color: #EC7FA9;
+  outline: none;
+}
+
+/* Estilos del formulario */
+.trivia-container form {
+  width: 100%; /* Asegura que el formulario ocupe todo el espacio disponible */
+  max-width: 800px; /* Limita el ancho máximo del formulario */
+  margin: 0 auto; /* Centra el formulario */
+}
+
+
+.result {
+  margin-top: 20px;
+  font-size: 18px;
+  color: black;
+  font-weight: 600;
+}
